@@ -172,7 +172,7 @@ https://gitlab.com/toryanderson/hugo-icarus
 
 > 参考：https://blog.csdn.net/homography/article/details/106168190
 
-如何安装Nginx以及配置参考：
+如何安装Nginx以及配置参考：http://liuchenshuo.com/2021/02/14/nginx-linux-%E5%AE%89%E8%A3%85/
 
 **生成静态网站**
 

@@ -1,4 +1,4 @@
-baseurl = "https://example.org/"
+baseurl = "http://liuchenshuo.com/"
 languageCode = "en-us"
 title = "Lcs"
 # Enable comments by entering your Disqus shortname
@@ -64,15 +64,15 @@ theme = "hugo-icarus"
 
 # Enter a link for the follow button on the left
 [params.profile]
-    follow_button = "https://github.com/gohugoio"
+    follow_button = "https://github.com/liuchenshuo/hugo"
 
 
 [social]
 # Add your social network accounts to the profile section on the left
 # by entering your username. The links to your account will be
 # created automatically.
-    github          = "gohugoio"
-    gitlab          = ""
+    github          = "liuchenshuo"
+    gitlab          = "liuchenshuo"
     bitbucket       = ""
     jsfiddle        = ""
     codepen         = ""
@@ -89,7 +89,7 @@ theme = "hugo-icarus"
     wordpress       = ""
     tumblr          = ""
     xing            = ""
-    linkedin        = ""
+    linkedin        = "晨硕-刘-462b641a3/"
     slideshare      = ""
     stackoverflow   = ""
     reddit          = ""
@@ -98,7 +98,7 @@ theme = "hugo-icarus"
     facebook        = ""
     facebook_admin  = ""
     twitter_domain  = ""
-    twitter         = "gohugoio"
+    twitter         = ""
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]

@@ -38,7 +38,7 @@ Nginx 基本命令 nginx -s reload //修改完成后重加载配置文件 nginx 
 在服务器目录 /etc/nginx 中生成私钥: openssl genrsa -out rulenuts.key. 根据私钥生成证书（公钥）: openssl req -new -x509 -key rulenuts.key -out rulenuts.crt.   本地支持hugo静态网页配置示例">
 <meta itemprop="datePublished" content="2021-02-14T20:06:22+02:00" />
 <meta itemprop="dateModified" content="2021-02-14T20:06:22+02:00" />
-<meta itemprop="wordCount" content="97">
+<meta itemprop="wordCount" content="111">
 
 
 
@@ -50,7 +50,6 @@ Nginx 基本命令 nginx -s reload //修改完成后重加载配置文件 nginx 
 其他的配置 目录中的 nginx.conf 即可。
 Nginx 基本命令 nginx -s reload //修改完成后重加载配置文件 nginx -t //检查修改后的nginx配置 systemctl start nginx //启动 nginx 服务 systemctl status nginx //检查 nginx 服务的运行情况 systemctl restart nginx //重启 nginx 服务 其他配置   配置支持https
 在服务器目录 /etc/nginx 中生成私钥: openssl genrsa -out rulenuts.key. 根据私钥生成证书（公钥）: openssl req -new -x509 -key rulenuts.key -out rulenuts.crt.   本地支持hugo静态网页配置示例"/>
-<meta name="twitter:site" content="@gohugoio"/>
 
     
 
@@ -169,7 +168,7 @@ Nginx 基本命令 nginx -s reload //修改完成后重加载配置文件 nginx 
       <h3 id="title">混合工程师</h3>
       <span id="location"><i class="fa fa-map-marker"></i>地球</span>
       
-          <a id="follow" href="https://github.com/gohugoio">
+          <a id="follow" href="https://github.com/liuchenshuo/hugo">
               Follow
           </a>
       
@@ -192,7 +191,11 @@ Nginx 基本命令 nginx -s reload //修改完成后重加载配置文件 nginx 
       <table>
         <tr>
           
-<td><a href="//github.com/gohugoio" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+<td><a href="//github.com/liuchenshuo" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+<td><a href="//gitlab.com/u/liuchenshuo" target="_blank" title="GitLab"><i class="fa fa-gitlab"></i></a></td>
 
 
 
@@ -228,6 +231,7 @@ Nginx 基本命令 nginx -s reload //修改完成后重加载配置文件 nginx 
 
 
 
+<td><a href="//linkedin.com/in/%e6%99%a8%e7%a1%95-%e5%88%98-462b641a3/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
 
 
 
@@ -242,9 +246,6 @@ Nginx 基本命令 nginx -s reload //修改完成后重加载配置文件 nginx 
 
 
 
-
-
-<td><a href="//twitter.com/gohugoio" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
 
 
           <td><a href="http://39.99.40.78:1313/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
@@ -275,7 +276,7 @@ Nginx 基本命令 nginx -s reload //修改完成后重加载配置文件 nginx 
             <i class="fa fa-calendar"></i>
             <time datetime="2021-02-14 20:06:22 &#43;0200 &#43;0200" itemprop="datePublished">2021-02-14</time>
             &middot;
-            97
+            111
             个字
             &middot;
             1
@@ -349,7 +350,15 @@ systemctl restart nginx  //重启 nginx 服务
             root  /home/hugo/public;
         }
     }
-</code></pre></li>
+</code></pre><p>域名重定向</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> server <span style="color:#f92672">{</span>
+     listen  80;
+     server_name  liuchenshuo.com;
+     location / <span style="color:#f92672">{</span>
+         proxy_pass http://localhost:1313;
+     <span style="color:#f92672">}</span>
+ <span style="color:#f92672">}</span>
+</code></pre></div></li>
 </ol>
 
         </div>

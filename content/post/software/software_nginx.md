@@ -67,4 +67,14 @@ systemctl restart nginx  //重启 nginx 服务
            }
        }
    ```
+   域名重定向
+   ```bash
+    server {
+        listen  80;
+        server_name  liuchenshuo.com;
+        location / {
+            proxy_pass http://localhost:1313;
+        }
+    }
+   ```
 
