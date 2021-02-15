@@ -1,0 +1,39 @@
+[articles]
+    read_more = "阅读更多"
+    words = "个字"
+    readingtime = "分钟前读过"
+    share = "分享"
+    comments = "评论"
+
+# Linked older/newer posts at the bottom of each one
+[articles.linked_posts]
+    older = "上一篇"
+    newer = "下一篇"
+
+[search]
+    placeholder = "搜索"
+
+[pagination]
+    previous = "前一页"
+    next = "后一页"
+
+[profile]
+    follow_button = "Follow"
+    tags = "标签"
+    posts = "博客"
+
+[page_not_found]
+    title = "404 - 页面未找到"
+    subtitle = "你查找的文章不存在。"
+
+[widgets.categories]
+    title = "分类"
+
+[widgets.recent_articles]
+    title = "近期"
+
+[widgets.tag_cloud]
+    title = "标签汇总"
+
+[widgets.tags]
+    title = "标签"
