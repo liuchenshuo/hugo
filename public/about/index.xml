@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>个人主页 on Lcs</title>
+    <link>http://39.99.40.78:1313/about/</link>
+    <description>Recent content in 个人主页 on Lcs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Feb 2021 21:49:20 +0200</lastBuildDate><atom:link href="http://39.99.40.78:1313/about/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>使用Hugo搭建个人博客 &middot; Lcs</title>
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="刘晨硕">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <link rel="icon" href="http://39.99.40.78:1313/favicon.ico">
+    <link rel="apple-touch-icon" href="http://39.99.40.78:1313/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="http://39.99.40.78:1313/css/style.css">
+    <link rel="stylesheet" href="http://39.99.40.78:1313/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://39.99.40.78:1313/css/monokai.css">
+    <link rel="stylesheet" href="http://39.99.40.78:1313/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="使用Hugo搭建个人博客" />
+<meta property="og:description" content="使用Hugo搭建个人博客 写在前面
+个人博客项目有很多
+  wordpress（php编写）
+  gitBook（git hub支持）
+  hugo（go编写）
+  &hellip;&hellip;.
+  其实博客项目一般不需要自己修改源码，自己需要深度定制除外。这里因为仅仅需要存放一些个人md文档，所以在gitBook以及hugo之间进行选择，gitBook界面比较近简单，这里就选取了hugo。
+Hugo介绍  英文官方文档：https://gohugo.io/overview/introduction/
+中文官方文档：https://www.gohugo.org/
+皮肤列表：https://github.com/spf13/hugoThemes
+ Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。
+最喜欢的一点是：博客文章可以以文本文件的方式（MarkDown）在本地维护管理，不需要像之前那样在网页的编辑器里提交到网站数据库。你可以方便的使用github管理你的博客文章，不会丢失，又能追溯到每一次的内容变更。
+搭建过程 （Windows） 下载安装包并安装  git上的最新地址：https://github.com/gohugoio/hugo/releases
+0.80版本Windows百度云：
+ 下载正常版本即可，对应的extended版本还没搞懂有什么特别的。
+下载的是对应的压缩包，解压后进入，不知道是不是我点击exe没有安装，还是就不会安装，我这里将hugo.exe添加到了系统环境变量path中（重启计算机生效）这样hugo命令在cmd中才会生效，当然进入到hugo.exe的文件夹，输入cmd打开命令行也可以，不过后面操作有的就需要输入绝对路径了
+生成站点 使用Hugo快速生成站点，比如希望生成到G:\workspace\hugo 路径：
+hugo new site G:\workspace\hugo 成功后会有提示：Congratulations! Your new Hugo site is created in G:\workspace\hugo.
+这样就在  G:\workspace\hugo. 目录里生成了初始站点，进去目录：
+cd G:\workspace\hugo 站点目录结构：
+ ▸ archetypes/▸ content/▸ static/▸ layouts/▸ static/▸ themes/config." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
+<meta property="article:published_time" content="2021-02-12T12:10:51+02:00" />
+<meta property="article:modified_time" content="2021-02-12T12:10:51+02:00" />
+
+    
+    <meta itemprop="name" content="使用Hugo搭建个人博客">
+<meta itemprop="description" content="使用Hugo搭建个人博客 写在前面
+个人博客项目有很多
+  wordpress（php编写）
+  gitBook（git hub支持）
+  hugo（go编写）
+  &hellip;&hellip;.
+  其实博客项目一般不需要自己修改源码，自己需要深度定制除外。这里因为仅仅需要存放一些个人md文档，所以在gitBook以及hugo之间进行选择，gitBook界面比较近简单，这里就选取了hugo。
+Hugo介绍  英文官方文档：https://gohugo.io/overview/introduction/
+中文官方文档：https://www.gohugo.org/
+皮肤列表：https://github.com/spf13/hugoThemes
+ Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。
+最喜欢的一点是：博客文章可以以文本文件的方式（MarkDown）在本地维护管理，不需要像之前那样在网页的编辑器里提交到网站数据库。你可以方便的使用github管理你的博客文章，不会丢失，又能追溯到每一次的内容变更。
+搭建过程 （Windows） 下载安装包并安装  git上的最新地址：https://github.com/gohugoio/hugo/releases
+0.80版本Windows百度云：
+ 下载正常版本即可，对应的extended版本还没搞懂有什么特别的。
+下载的是对应的压缩包，解压后进入，不知道是不是我点击exe没有安装，还是就不会安装，我这里将hugo.exe添加到了系统环境变量path中（重启计算机生效）这样hugo命令在cmd中才会生效，当然进入到hugo.exe的文件夹，输入cmd打开命令行也可以，不过后面操作有的就需要输入绝对路径了
+生成站点 使用Hugo快速生成站点，比如希望生成到G:\workspace\hugo 路径：
+hugo new site G:\workspace\hugo 成功后会有提示：Congratulations! Your new Hugo site is created in G:\workspace\hugo.
+这样就在  G:\workspace\hugo. 目录里生成了初始站点，进去目录：
+cd G:\workspace\hugo 站点目录结构：
+ ▸ archetypes/▸ content/▸ static/▸ layouts/▸ static/▸ themes/config.">
+<meta itemprop="datePublished" content="2021-02-12T12:10:51+02:00" />
+<meta itemprop="dateModified" content="2021-02-12T12:10:51+02:00" />
+<meta itemprop="wordCount" content="184">
+
+
+
+<meta itemprop="keywords" content="软件安装," />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用Hugo搭建个人博客"/>
+<meta name="twitter:description" content="使用Hugo搭建个人博客 写在前面
+个人博客项目有很多
+  wordpress（php编写）
+  gitBook（git hub支持）
+  hugo（go编写）
+  &hellip;&hellip;.
+  其实博客项目一般不需要自己修改源码，自己需要深度定制除外。这里因为仅仅需要存放一些个人md文档，所以在gitBook以及hugo之间进行选择，gitBook界面比较近简单，这里就选取了hugo。
+Hugo介绍  英文官方文档：https://gohugo.io/overview/introduction/
+中文官方文档：https://www.gohugo.org/
+皮肤列表：https://github.com/spf13/hugoThemes
+ Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。
+最喜欢的一点是：博客文章可以以文本文件的方式（MarkDown）在本地维护管理，不需要像之前那样在网页的编辑器里提交到网站数据库。你可以方便的使用github管理你的博客文章，不会丢失，又能追溯到每一次的内容变更。
+搭建过程 （Windows） 下载安装包并安装  git上的最新地址：https://github.com/gohugoio/hugo/releases
+0.80版本Windows百度云：
+ 下载正常版本即可，对应的extended版本还没搞懂有什么特别的。
+下载的是对应的压缩包，解压后进入，不知道是不是我点击exe没有安装，还是就不会安装，我这里将hugo.exe添加到了系统环境变量path中（重启计算机生效）这样hugo命令在cmd中才会生效，当然进入到hugo.exe的文件夹，输入cmd打开命令行也可以，不过后面操作有的就需要输入绝对路径了
+生成站点 使用Hugo快速生成站点，比如希望生成到G:\workspace\hugo 路径：
+hugo new site G:\workspace\hugo 成功后会有提示：Congratulations! Your new Hugo site is created in G:\workspace\hugo.
+这样就在  G:\workspace\hugo. 目录里生成了初始站点，进去目录：
+cd G:\workspace\hugo 站点目录结构：
+ ▸ archetypes/▸ content/▸ static/▸ layouts/▸ static/▸ themes/config."/>
+<meta name="twitter:site" content="@gohugoio"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://39.99.40.78:1313/" id="logo">
+          
+          <i class="logo" style="background-image: url('http://39.99.40.78:1313/css/images/logo.png')"></i>
+          
+          <span class="site-title">Lcs</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://39.99.40.78:1313/">主页</a>
+          
+          
+          
+          
+          
+          
+
+          
+          <a class="main-nav-link" href="/about/">个人主页</a>
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://39.99.40.78:1313/tags/">标签</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://39.99.40.78:1313/categories/">分类</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://39.99.40.78:1313/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="搜索">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="http://39.99.40.78:1313/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://39.99.40.78:1313/">主页</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+          <td><a class="main-nav-link" href="/about/">个人主页</a></td>
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://39.99.40.78:1313/tags/">标签</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://39.99.40.78:1313/categories/">分类</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://39.99.40.78:1313/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/45e80e4e355e6c47ca8d3523dfef668d?s=100&d=identicon"/>
+      
+      <h2 id="name">刘晨硕</h2>
+      <h3 id="title">混合工程师</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>地球</span>
+      
+          <a id="follow" href="https://github.com/gohugoio">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        2
+        <span>博客</span>
+      </div>
+      <div class="article-info-block">
+        
+          1
+        
+        <span>
+            标签
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/gohugoio" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//twitter.com/gohugoio" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="http://39.99.40.78:1313/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+    <h1 class="article-title" itemprop="name">
+        使用Hugo搭建个人博客
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2021-02-12 12:10:51 &#43;0200 &#43;0200" itemprop="datePublished">2021-02-12</time>
+            &middot;
+            184
+            个字
+            &middot;
+            1
+            分钟前读过
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://39.99.40.78:1313/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99">个人网站</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://39.99.40.78:1313/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">软件安装</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="使用hugo搭建个人博客">使用Hugo搭建个人博客</h2>
+<p><strong>写在前面</strong></p>
+<p>个人博客项目有很多</p>
+<ul>
+<li>
+<p>wordpress（php编写）</p>
+</li>
+<li>
+<p>gitBook（git hub支持）</p>
+</li>
+<li>
+<p>hugo（go编写）</p>
+</li>
+<li>
+<p>&hellip;&hellip;.</p>
+</li>
+</ul>
+<p>其实博客项目一般不需要自己修改源码，自己需要深度定制除外。这里因为仅仅需要存放一些个人md文档，所以在gitBook以及hugo之间进行选择，gitBook界面比较近简单，这里就选取了hugo。</p>
+<h2 id="hugo介绍">Hugo介绍</h2>
+<blockquote>
+<p>英文官方文档：https://gohugo.io/overview/introduction/</p>
+<p>中文官方文档：https://www.gohugo.org/</p>
+<p>皮肤列表：https://github.com/spf13/hugoThemes</p>
+</blockquote>
+<p>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。</p>
+<p>最喜欢的一点是：博客文章可以以文本文件的方式（MarkDown）在本地维护管理，不需要像之前那样在网页的编辑器里提交到网站数据库。你可以方便的使用github管理你的博客文章，不会丢失，又能追溯到每一次的内容变更。</p>
+<h2 id="搭建过程-windows">搭建过程 （Windows）</h2>
+<h3 id="下载安装包并安装">下载安装包并安装</h3>
+<blockquote>
+<p>git上的最新地址：https://github.com/gohugoio/hugo/releases</p>
+<p>0.80版本Windows百度云：</p>
+</blockquote>
+<p>下载正常版本即可，对应的extended版本还没搞懂有什么特别的。</p>
+<p>下载的是对应的压缩包，解压后进入，<strong>不知道是不是我点击exe没有安装，还是就不会安装，我这里将hugo.exe添加到了系统环境变量path中（重启计算机生效）这样hugo命令在cmd中才会生效，当然进入到hugo.exe的文件夹，输入<code>cmd</code>打开命令行也可以，不过后面操作有的就需要输入绝对路径了</strong></p>
+<h3 id="生成站点">生成站点</h3>
+<p>使用Hugo快速生成站点，比如希望生成到<code>G:\workspace\hugo</code> 路径：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo new site G:\workspace\hugo
+</code></pre></div><p>成功后会有提示：Congratulations! Your new Hugo site is created in G:\workspace\hugo.</p>
+<p>这样就在 <code> G:\workspace\hugo.</code> 目录里生成了初始站点，进去目录：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd  G:<span style="color:#ae81ff">\w</span>orkspace<span style="color:#ae81ff">\h</span>ugo
+</code></pre></div><p>站点目录结构：</p>
+<pre><code>  ▸ archetypes/
+  ▸ content/
+  ▸ static/
+  ▸ layouts/
+  ▸ static/
+  ▸ themes/
+    config.toml
+</code></pre><h3 id="创建文章">创建文章</h3>
+<p>创建一个 <code>about</code> 页面（要进入到站点目录，我这里是<code> G:\workspace\hugo</code>）：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new about.md
+</code></pre></div><p><code>about.md</code> 自动生成到了 <code>content/about.md</code> ，打开 <code>about.md</code> 看下：</p>
+<pre><code>---
+date = &quot;2015-10-25T08:36:54-07:00&quot;
+draft = true
+title = &quot;about&quot;
+
+---
+
+正文内容
+</code></pre><p>内容是 <code>Markdown</code> 格式的，<code>+++</code> 之间的内容是 <a href="https://github.com/toml-lang/toml">TOML</a> 格式的，根据你的喜好，你可以换成 <a href="http://www.yaml.org/">YAML</a> 格式（使用 <code>---</code> 标记）或者 <a href="http://www.json.org/">JSON</a> 格式。</p>
+<p>创建第一篇文章，放到 <code>post</code> 目录，方便之后生成聚合页面。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new post/first.md
+</code></pre></div><p>打开编辑 <code>post/first.md</code> ：</p>
+<pre><code>---
+date: &quot;2015-10-25T08:36:54-07:00&quot;
+title: &quot;first&quot;
+ 
+---
+
+### Hello Hugo
+
+ 1. aaa
+ 1. bbb
+ 1. ccc
+</code></pre><h3 id="安装皮肤">安装皮肤</h3>
+<p>到 <a href="https://www.gohugo.org/theme/">皮肤列表</a> 挑选一个心仪的皮肤，比如你觉得 哪款相关的 <code>GitHub</code> 地址，创建目录 <code>themes</code>，在 <code>themes</code> 目录里把皮肤 <code>git clone</code> 下来：</p>
+<p>我这里使用的是：hugo-icarus-theme</p>
+<blockquote>
+<p>git地址：https://gitlab.com/toryanderson/hugo-icarus</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 创建 themes 目录</span>
+cd themes
+git clone https://gitlab.com/toryanderson/hugo-icarus
+</code></pre></div><h4 id="皮肤配置">皮肤配置</h4>
+<p>这个皮肤需要进行一些配置</p>
+<ol>
+<li>
+<p>进入皮肤的示例目录：<code>themes/hugo-type-theme/exampleSite/</code></p>
+</li>
+<li>
+<p>将示例目录<code>exampleSite/</code>下面的内容全部拷贝到站点根目录中</p>
+</li>
+<li>
+<p>修改站点根目录中的配置文件：<strong><code>config.toml</code></strong></p>
+<p>将里面的 <code>themesDir = &quot;../..&quot;</code> 注释掉，这个是为了启动demo使用的</p>
+</li>
+</ol>
+<h3 id="运行hugo">运行Hugo</h3>
+<p>在你的站点根目录执行 <code>Hugo</code> 命令进行调试：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server --theme<span style="color:#f92672">=</span>hugo-icarus --buildDrafts
+</code></pre></div><p>（注明：v0.15 版本之后，不再需要使用 <code>--watch</code> 参数了）</p>
+<p>浏览器里打开： <code>http://localhost:1313</code></p>
+<h3 id="根据自己需要进行配置">根据自己需要进行配置</h3>
+<p>参考对应的主题配置文档即可，这里hugo-icarus-theme文档</p>
+<p><a href="https://gitlab.com/toryanderson/hugo-icarus">https://gitlab.com/toryanderson/hugo-icarus</a></p>
+<p>中文翻译参考：</p>
+<h3 id="部署">部署</h3>
+<p>一般推荐GitHub Pages我这里是自己服务器部署，直接使用Nginx作为服务部署</p>
+<blockquote>
+<p>参考：https://blog.csdn.net/homography/article/details/106168190</p>
+</blockquote>
+<p>如何安装Nginx以及配置参考：</p>
+<p><strong>生成静态网站</strong></p>
+<p>执行命令</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo --theme<span style="color:#f92672">=</span>hugo-icarus --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://39.99.40.78:1313/&#34;</span>
+</code></pre></div><p>说明：</p>
+<ul>
+<li>&ndash;theme：制定主题</li>
+<li>&ndash;baseUrl：制定访问url，这个很重要，制定是如何访问的，比如我是使用云服务器nginx代理1313端口反问，如果不写baseUrl界面渲染就会有问题，什么原理暂时没有搞懂，后面看看源码吧。</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="666bdb0edfd3e4ee8238686d1f8fcea2" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+
+    
+    <a href="http://39.99.40.78:1313/2021/02/14/nginx-linux-%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          下一篇
+      </strong>
+      <div class="article-nav-title">Nginx linux 安装</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        近期
+    </h3>
+    <div class="widget">
+      <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://39.99.40.78:1313/2021/02/14/nginx-linux-%E5%AE%89%E8%A3%85/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://39.99.40.78:1313/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6">
+                        工具软件
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://39.99.40.78:1313/2021/02/14/nginx-linux-%E5%AE%89%E8%A3%85/" class="title">Nginx linux 安装</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-02-14 20:06:22 &#43;0200 &#43;0200" itemprop="datePublished">2021-02-14</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://39.99.40.78:1313/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99">
+                        个人网站
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="title">使用Hugo搭建个人博客</a></p>
+                    <p class="item-date">
+                        <time datetime="2021-02-12 12:10:51 &#43;0200 &#43;0200" itemprop="datePublished">2021-02-12</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://39.99.40.78:1313/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99">
+                    个人网站
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://39.99.40.78:1313/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6">
+                    工具软件
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        标签
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://39.99.40.78:1313/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">
+                    软件安装
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        标签汇总
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="http://39.99.40.78:1313/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85" style="font-size: 12px;">软件安装</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021
+      Powered by <a href="https://www.gohugo.org/">Hugo</a>. Theme by <a href="https://gitlab.com/toryanderson/hugo-icarus">Icarus</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="http://39.99.40.78:1313/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://39.99.40.78:1313/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>

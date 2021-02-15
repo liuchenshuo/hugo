@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Lcs</title>
+    <link>http://39.99.40.78:1313/post/</link>
+    <description>Recent content in Posts on Lcs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Feb 2021 20:06:22 +0200</lastBuildDate><atom:link href="http://39.99.40.78:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx linux 安装</title>
+      <link>http://39.99.40.78:1313/2021/02/14/nginx-linux-%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Sun, 14 Feb 2021 20:06:22 +0200</pubDate>
+      
+      <guid>http://39.99.40.78:1313/2021/02/14/nginx-linux-%E5%AE%89%E8%A3%85/</guid>
+      <description>Linux 安装 Nginx CentOs 安装 yum install nginx Linux 安装 apt install nginx 配置文件位置 通过系统命令安装的会默认生成到 /etc/nginx
+其他的配置 目录中的 nginx.conf 即可。
+Nginx 基本命令 nginx -s reload //修改完成后重加载配置文件 nginx -t //检查修改后的nginx配置 systemctl start nginx //启动 nginx 服务 systemctl status nginx //检查 nginx 服务的运行情况 systemctl restart nginx //重启 nginx 服务 其他配置   配置支持https
+在服务器目录 /etc/nginx 中生成私钥: openssl genrsa -out rulenuts.key. 根据私钥生成证书（公钥）: openssl req -new -x509 -key rulenuts.key -out rulenuts.crt.   本地支持hugo静态网页配置示例</description>
+    </item>
+    
+    <item>
+      <title>使用Hugo搭建个人博客</title>
+      <link>http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 12 Feb 2021 12:10:51 +0200</pubDate>
+      
+      <guid>http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>使用Hugo搭建个人博客 写在前面
+个人博客项目有很多
+  wordpress（php编写）
+  gitBook（git hub支持）
+  hugo（go编写）
+  &amp;hellip;&amp;hellip;.
+  其实博客项目一般不需要自己修改源码，自己需要深度定制除外。这里因为仅仅需要存放一些个人md文档，所以在gitBook以及hugo之间进行选择，gitBook界面比较近简单，这里就选取了hugo。
+Hugo介绍  英文官方文档：https://gohugo.io/overview/introduction/
+中文官方文档：https://www.gohugo.org/
+皮肤列表：https://github.com/spf13/hugoThemes
+ Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。
+最喜欢的一点是：博客文章可以以文本文件的方式（MarkDown）在本地维护管理，不需要像之前那样在网页的编辑器里提交到网站数据库。你可以方便的使用github管理你的博客文章，不会丢失，又能追溯到每一次的内容变更。
+搭建过程 （Windows） 下载安装包并安装  git上的最新地址：https://github.com/gohugoio/hugo/releases
+0.80版本Windows百度云：
+ 下载正常版本即可，对应的extended版本还没搞懂有什么特别的。
+下载的是对应的压缩包，解压后进入，不知道是不是我点击exe没有安装，还是就不会安装，我这里将hugo.exe添加到了系统环境变量path中（重启计算机生效）这样hugo命令在cmd中才会生效，当然进入到hugo.exe的文件夹，输入cmd打开命令行也可以，不过后面操作有的就需要输入绝对路径了
+生成站点 使用Hugo快速生成站点，比如希望生成到G:\workspace\hugo 路径：
+hugo new site G:\workspace\hugo 成功后会有提示：Congratulations! Your new Hugo site is created in G:\workspace\hugo.
+这样就在  G:\workspace\hugo. 目录里生成了初始站点，进去目录：
+cd G:\workspace\hugo 站点目录结构：
+ ▸ archetypes/▸ content/▸ static/▸ layouts/▸ static/▸ themes/config.</description>
+    </item>
+    
+  </channel>
+</rss>
