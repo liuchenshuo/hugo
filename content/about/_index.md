@@ -5,4 +5,4 @@ menu = "main"
 disable_comments = true
 +++
 
-一个以混合工程师自居的自封创客。
+一个以混合工程师自居的多元搬砖工人。
