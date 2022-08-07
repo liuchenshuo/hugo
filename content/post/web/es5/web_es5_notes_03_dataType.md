@@ -5,10 +5,10 @@ date = "2021-07-09T09:03:51+02:00"
 description = ""
 images = []
 tags = ["es5规范"]
-title = "es5规范以及DOM规范--数据类型"
+title = "es5规范以及DOM规范--03数据类型"
 
 +++
-# ES5 以及 DOM 规范--数据类型
+# ES5 以及 DOM 规范--03数据类型
 > 学习参考链接 https://wangdoc.com/javascript/types/general.html
 
 ### 概述

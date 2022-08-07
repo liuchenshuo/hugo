@@ -8,7 +8,7 @@ hugo server --theme=hugo-icarus --buildDrafts
 ## How to deploy
 使用nginx直接访问，根目录执行命令
 ```bash
-hugo --theme=hugo-icarus --baseUrl="http://39.99.40.78:1313/"
+hugo --theme=hugo-icarus --baseUrl="http://liuchenshuo.com/"
 ```
 将生成的文件夹 `public` 拷贝到服务即可
 * 服务器：39.99.40.78

@@ -5,10 +5,10 @@ date = "2021-04-11T09:03:51+02:00"
 description = ""
 images = []
 tags = ["es5规范"]
-title = "es5规范以及DOM规范——入门介绍"
+title = "es5规范以及DOM规范——01入门介绍"
 
 +++
-## ES5 以及 DOM 规范--入门介绍
+# ES5 以及 DOM 规范--01入门介绍
 > 学习参考链接 https://wangdoc.com/javascript/
 
 浏览器的控制台console是可以敲代码运行的，shift + enter 是换行。

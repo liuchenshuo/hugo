@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>个人网站 on Lcs</title>
-    <link>http://39.99.40.78:1313/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+    <link>http://liuchenshuo.com/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
     <description>Recent content in 个人网站 on Lcs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Feb 2021 12:10:51 +0200</lastBuildDate><atom:link href="http://39.99.40.78:1313/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021 12:10:51 +0200</lastBuildDate><atom:link href="http://liuchenshuo.com/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用Hugo搭建个人博客</title>
-      <link>http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>http://liuchenshuo.com/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Fri, 12 Feb 2021 12:10:51 +0200</pubDate>
       
-      <guid>http://39.99.40.78:1313/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>http://liuchenshuo.com/2021/02/12/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>使用Hugo搭建个人博客 写在前面
 个人博客项目有很多
   wordpress（php编写）
