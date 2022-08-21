@@ -79,12 +79,12 @@ NETWORK ID NAME DRIVER SCOPE78a4240d5b93 bridge bridge localb93f96ae1e20 host 
     </item>
     
     <item>
-      <title>es5规范以及DOM规范--数据类型</title>
-      <link>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+      <title>es5规范以及DOM规范--03数据类型</title>
+      <link>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-03%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
       <pubDate>Fri, 09 Jul 2021 09:03:51 +0200</pubDate>
       
-      <guid>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
-      <description>ES5 以及 DOM 规范&amp;ndash;数据类型  学习参考链接 https://wangdoc.com/javascript/types/general.html
+      <guid>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-03%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;03数据类型  学习参考链接 https://wangdoc.com/javascript/types/general.html
  概述 六种基本类型
  数值（number）：整数以及小数，例如：1; 3.14。 字符串（string）：文本，例如 hello。 布尔值（boolean）：表示真伪，两个取值true; false。 undefined：表示未定义或不存在。 null：表示空值。 对象（object）：各种值的集合。  对象可以细分为三个子类
  狭义对象（object） 数组（array） 函数（function）  由于函数可以作为一种类型，为支持函数式编程提供了基础。
@@ -92,14 +92,16 @@ typeof 运算符 返回对象类型，特殊的 null 类型是 object，这个�
     </item>
     
     <item>
-      <title>es5规范以及DOM规范--运算符</title>
-      <link>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <title>es5规范以及DOM规范--04运算符</title>
+      <link>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-04%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
       <pubDate>Fri, 09 Jul 2021 09:03:51 +0200</pubDate>
       
-      <guid>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
-      <description>ES5 以及 DOM 规范&amp;ndash;运算符  学习参考链接 https://wangdoc.com/javascript/operators/arithmetic.html
+      <guid>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-04%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;04运算符  学习参考链接 https://wangdoc.com/javascript/operators/arithmetic.html
  算数运算符 运算符种类  加法运算符：x + y 减法运算符： x - y 乘法运算符： x * y 除法运算符：x / y 指数运算符：x ** y 余数运算符：x % y 自增运算符：++x 或者 x++ 自减运算符：--x 或者 x-- 数值运算符： +x 负数值运算符：-x  加法运算符 允许非数值相加布尔型相加会转换成数字
-true + true // 2</description>
+true + true // 2重载 除了加法运算符，其他算术运算符（比如减法、除法和乘法）都不会发生重载。它们的规则是：所有运算子一律转为数值，再进行相应的数学运算。
+1 - &#39;2&#39; // -11 * &#39;2&#39; // 21 / &#39;2&#39; // 0.5比较运算符 JavaScript 一共提供了8个比较运算符。
+ &amp;gt; 大于运算符 &amp;lt; 小于运算符 &amp;lt;= 小于或等于运算符 &amp;gt;= 大于或等于运算符 == 相等运算符 === 严格相等运算符 !</description>
     </item>
     
     <item>
@@ -117,12 +119,22 @@ true + true // 2</description>
     </item>
     
     <item>
-      <title>es5规范以及DOM规范——基本语法</title>
-      <link>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <title>es5规范以及DOM规范——00示例文档</title>
+      <link>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8300%E7%A4%BA%E4%BE%8B%E6%96%87%E6%A1%A3/</link>
       <pubDate>Fri, 21 May 2021 09:03:51 +0200</pubDate>
       
-      <guid>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
-      <description>ES5 以及 DOM 规范&amp;ndash;基本语法  学习参考链接 https://wangdoc.com/javascript/basic/grammar.html
+      <guid>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8300%E7%A4%BA%E4%BE%8B%E6%96%87%E6%A1%A3/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;00基本语法  学习参考链接 https://wangdoc.com/javascript/basic/grammar.html
+ JavaScript 的基本语法 </description>
+    </item>
+    
+    <item>
+      <title>es5规范以及DOM规范——02基本语法</title>
+      <link>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8302%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Fri, 21 May 2021 09:03:51 +0200</pubDate>
+      
+      <guid>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8302%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;02基本语法  学习参考链接 https://wangdoc.com/javascript/basic/grammar.html
  语句 一般情况下，JavaScript程序的一行就是一个语句。
 变量 var a =1;
   变量只有声明 var a; 没有赋值情况下，变量值都是 undefined 。
@@ -132,16 +144,6 @@ console.log(a);var a = 1;不会报错，实际执行为：var a;console.log(
 注释 // 1.单行注释/*2.多行注释*/&amp;lt;!-- 3.也是支持的 --&amp;gt;区块 使用大括号构成区块，不过var区块外也生效
 { var a= 1}console.log(a) // 1条件语句 支持 if else以及switch
 switch 中的判断执行的是 === 严格相等运算符，而不是==所以不会发生类型转化</description>
-    </item>
-    
-    <item>
-      <title>es5规范以及DOM规范——示例文档</title>
-      <link>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83%E7%A4%BA%E4%BE%8B%E6%96%87%E6%A1%A3/</link>
-      <pubDate>Fri, 21 May 2021 09:03:51 +0200</pubDate>
-      
-      <guid>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83%E7%A4%BA%E4%BE%8B%E6%96%87%E6%A1%A3/</guid>
-      <description>ES5 以及 DOM 规范  学习参考链接 https://wangdoc.com/javascript/basic/grammar.html
- JavaScript 的基本语法 </description>
     </item>
     
     <item>
@@ -161,12 +163,12 @@ next Page 51</description>
     </item>
     
     <item>
-      <title>es5规范以及DOM规范——入门介绍</title>
-      <link>http://liuchenshuo.com/2021/04/11/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</link>
+      <title>es5规范以及DOM规范——01入门介绍</title>
+      <link>http://liuchenshuo.com/2021/04/11/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8301%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</link>
       <pubDate>Sun, 11 Apr 2021 09:03:51 +0200</pubDate>
       
-      <guid>http://liuchenshuo.com/2021/04/11/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</guid>
-      <description>ES5 以及 DOM 规范&amp;ndash;入门介绍  学习参考链接 https://wangdoc.com/javascript/
+      <guid>http://liuchenshuo.com/2021/04/11/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8301%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;01入门介绍  学习参考链接 https://wangdoc.com/javascript/
  浏览器的控制台console是可以敲代码运行的，shift + enter 是换行。
 JavaScript语言优缺点：《JavaScript: The Good Parts》
 语言的产生 1995年5月，Brendan Eich 只用了10天，就设计完成了这种语言的第一版。它是一个大杂烩，语法有多个来源。
