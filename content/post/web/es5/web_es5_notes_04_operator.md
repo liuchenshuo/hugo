@@ -5,10 +5,10 @@ date = "2021-07-09T09:03:51+02:00"
 description = ""
 images = []
 tags = ["es5规范"]
-title = "es5规范以及DOM规范--04运算符"
+title = "es5规范以及DOM规范--04 运算符"
 
 +++
-# ES5 以及 DOM 规范--04运算符
+# ES5 以及 DOM 规范--04 运算符
 > 学习参考链接 https://wangdoc.com/javascript/operators/arithmetic.html
 
 ## 算数运算符
