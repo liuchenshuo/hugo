@@ -6,7 +6,77 @@
     <description>Recent content on Lcs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jan 2022 12:10:51 +0200</lastBuildDate><atom:link href="http://liuchenshuo.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Sep 2022 09:03:51 +0200</lastBuildDate><atom:link href="http://liuchenshuo.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>es5规范以及DOM规范--06 编程风格（个人）</title>
+      <link>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-06-%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC%E4%B8%AA%E4%BA%BA/</link>
+      <pubDate>Sat, 10 Sep 2022 09:03:51 +0200</pubDate>
+      
+      <guid>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-06-%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC%E4%B8%AA%E4%BA%BA/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;06 编程风格（个人）  学习参考链接 https://wangdoc.com/javascript/features/style.html
+ 编程风格（根据个人喜好总结）   缩进：使用tab缩进。
+  区块：使用大括号划分可能引起歧义的区块。同时为了防止自动添加句末分号引起的问题，推荐区块起首的大括号位置跟在关键字的后面。
+block {// ...}  圆括号：在 JavaScript 中有两种作用，一种表示函数的调用，另一种表示表达式的组合（grouping）。
+为了方便区分，最好遵循如下约束
+ 表示函数调用时，函数名与左括号之间没有空格。 表示函数定义时，函数名与左括号之间没有空格。 其他情况时，前面位置的语法元素与左括号之间，都有一个空格。  foo(bar) // 函数定义return (a+b); // 返回值if (a === 0) {...} // 判断条件function foo(b) {...} // 函数调用  行尾的分号：一般不要省略，除非语法规定本来就不需要在结尾添加分号。例如判断、循环、函数定义等。
+  全局变量：使用全大写加下划线定义方式 UPPER_CASE
+  with语句：尽量不使用，由于大量使用with语句会导致性能的下降，同时也会给代码的调试造成困难，因此在开发大型应用程序的时候，不建议使用with语句。
+语法：with (expression) statement
+示例：
+定义with语句的目的主要是为了简化多次编写同一个对象的工作，如下面的例子
+var qs = location.search.substring(1);var hostName=location.</description>
+    </item>
+    
+    <item>
+      <title>es5规范以及DOM规范--07 标准库</title>
+      <link>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/</link>
+      <pubDate>Sat, 10 Sep 2022 09:03:51 +0200</pubDate>
+      
+      <guid>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;07 标准库  学习参考链接 https://wangdoc.com/javascript/stdlib/index.html
+ Object对象 </description>
+    </item>
+    
+    <item>
+      <title>安卓app开发技术</title>
+      <link>http://liuchenshuo.com/2022/08/20/%E5%AE%89%E5%8D%93app%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sat, 20 Aug 2022 21:03:51 +0200</pubDate>
+      
+      <guid>http://liuchenshuo.com/2022/08/20/%E5%AE%89%E5%8D%93app%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/</guid>
+      <description>安卓app开发技术 这里主要考虑当前比较成熟的几个跨平台方案
+ flutter react-native uni-app  总体对比可以参考：https://www.zhihu.com/question/514074001/answer/2585060251
+因为博主本身技术偏向 react ，这里主要以 react-native 作为研究
+react-native 官网：https://www.reactnative.cn/
+当前 react-native还没有正式1.0 版本，还在演进中，最新动态说明：https://juejin.cn/post/7063738658913779743
+简介 React Native使你能够在Javascript和 React的基础上获得完全一致的开发体验，构建世界一流的原生APP。React Native着力于提高多平台开发的开发效率 —— 仅需学习一次，编写任何平台。(Learn once, write anywhere) Facebook已经在多项产品中使用了React Native，并且将持续地投入建设React Native。</description>
+    </item>
+    
+    <item>
+      <title>es5规范以及DOM规范--05 语法介绍</title>
+      <link>http://liuchenshuo.com/2022/08/20/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-05-%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Sat, 20 Aug 2022 09:03:51 +0200</pubDate>
+      
+      <guid>http://liuchenshuo.com/2022/08/20/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-05-%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;05 语法介绍  学习参考链接 https://wangdoc.com/javascript/features/conversion.html
+ 数据类型的转换 JavaScript 是一种动态类型语言，变量没有类型限制，可以随时赋予任意值。
+var x = y ? 1 : &#39;a&#39;;强制转换方法 强制转换主要指使用
+  Number()：转换数字
+  String()：转换字符串
+  Boolean()：转换布尔值
+  注意：Boolean()函数可以将任意类型的值转为布尔值。
+它的转换规则相对简单：除了以下五个值的转换结果为false，其他的值全部为true。
+ undefined null 0（包含-0和+0） NaN &#39;&#39;（空字符串）  由于自动转换具有不确定性，而且不易除错，建议在预期为布尔值、数值、字符串的地方，全部使用Boolean()、Number()和String()函数进行显式转换。
+错误处理机制 常见错误类型
+  SyntaxError对象是解析代码时发生的语法错误
+  ReferenceError对象是引用一个不存在的变量时发生的错误。
+  RangeError对象是一个值超出有效范围时发生的错误。主要有几种情况，一是数组长度为负数，二是Number对象的方法参数超出范围，以及函数堆栈超过最大值。
+  TypeError对象是变量或参数不是预期类型时发生的错误。比如，对字符串、布尔值、数值等原始类型的值使用new命令，就会抛出这种错误，因为new命令的参数应该是一个构造函数。
+  URIError对象是 URI 相关函数的参数不正确时抛出的错误，主要涉及encodeURI()、decodeURI()、encodeURIComponent()、decodeURIComponent()、escape()和unescape()这六个函数。
+  eval函数没有被正确执行时，会抛出EvalError错误。该错误类型已经不再使用了，只是为了保证与以前代码兼容，才继续保留。
+  eval() 函数计算或执行参数。
+如果参数是表达式，则 eval() 计算表达式。如果参数是一个或多个 JavaScript 语句，则 eval() 执行这些语句。</description>
+    </item>
+    
     <item>
       <title>开源聊天室 RocketChat 安装</title>
       <link>http://liuchenshuo.com/2022/01/02/%E5%BC%80%E6%BA%90%E8%81%8A%E5%A4%A9%E5%AE%A4-rocketchat-%E5%AE%89%E8%A3%85/</link>
@@ -92,12 +162,12 @@ typeof 运算符 返回对象类型，特殊的 null 类型是 object，这个�
     </item>
     
     <item>
-      <title>es5规范以及DOM规范--04运算符</title>
-      <link>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-04%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <title>es5规范以及DOM规范--04 运算符</title>
+      <link>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-04-%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
       <pubDate>Fri, 09 Jul 2021 09:03:51 +0200</pubDate>
       
-      <guid>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-04%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
-      <description>ES5 以及 DOM 规范&amp;ndash;04运算符  学习参考链接 https://wangdoc.com/javascript/operators/arithmetic.html
+      <guid>http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-04-%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;04 运算符  学习参考链接 https://wangdoc.com/javascript/operators/arithmetic.html
  算数运算符 运算符种类  加法运算符：x + y 减法运算符： x - y 乘法运算符： x * y 除法运算符：x / y 指数运算符：x ** y 余数运算符：x % y 自增运算符：++x 或者 x++ 自减运算符：--x 或者 x-- 数值运算符： +x 负数值运算符：-x  加法运算符 允许非数值相加布尔型相加会转换成数字
 true + true // 2重载 除了加法运算符，其他算术运算符（比如减法、除法和乘法）都不会发生重载。它们的规则是：所有运算子一律转为数值，再进行相应的数学运算。
 1 - &#39;2&#39; // -11 * &#39;2&#39; // 21 / &#39;2&#39; // 0.5比较运算符 JavaScript 一共提供了8个比较运算符。
@@ -119,22 +189,22 @@ true + true // 2重载 除了加法运算符，其他算术运算符（比如�
     </item>
     
     <item>
-      <title>es5规范以及DOM规范——00示例文档</title>
-      <link>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8300%E7%A4%BA%E4%BE%8B%E6%96%87%E6%A1%A3/</link>
+      <title>es5规范以及DOM规范——00 示例文档</title>
+      <link>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8300-%E7%A4%BA%E4%BE%8B%E6%96%87%E6%A1%A3/</link>
       <pubDate>Fri, 21 May 2021 09:03:51 +0200</pubDate>
       
-      <guid>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8300%E7%A4%BA%E4%BE%8B%E6%96%87%E6%A1%A3/</guid>
-      <description>ES5 以及 DOM 规范&amp;ndash;00基本语法  学习参考链接 https://wangdoc.com/javascript/basic/grammar.html
+      <guid>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8300-%E7%A4%BA%E4%BE%8B%E6%96%87%E6%A1%A3/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;00 基本语法  学习参考链接 https://wangdoc.com/javascript/basic/grammar.html
  JavaScript 的基本语法 </description>
     </item>
     
     <item>
-      <title>es5规范以及DOM规范——02基本语法</title>
-      <link>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8302%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <title>es5规范以及DOM规范——02 基本语法</title>
+      <link>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8302-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Fri, 21 May 2021 09:03:51 +0200</pubDate>
       
-      <guid>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8302%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
-      <description>ES5 以及 DOM 规范&amp;ndash;02基本语法  学习参考链接 https://wangdoc.com/javascript/basic/grammar.html
+      <guid>http://liuchenshuo.com/2021/05/21/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8302-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;02 基本语法  学习参考链接 https://wangdoc.com/javascript/basic/grammar.html
  语句 一般情况下，JavaScript程序的一行就是一个语句。
 变量 var a =1;
   变量只有声明 var a; 没有赋值情况下，变量值都是 undefined 。
@@ -142,8 +212,7 @@ true + true // 2重载 除了加法运算符，其他算术运算符（比如�
   注意变量提升，JavaScript 引擎工作方式，先解析代码，获得所有的声明变量，然后逐行执行，会导致所有变量语句都被提升到代码头部。
 console.log(a);var a = 1;不会报错，实际执行为：var a;console.log(a);a = 1;  标识符 大小写敏感，中文也是合法字符
 注释 // 1.单行注释/*2.多行注释*/&amp;lt;!-- 3.也是支持的 --&amp;gt;区块 使用大括号构成区块，不过var区块外也生效
-{ var a= 1}console.log(a) // 1条件语句 支持 if else以及switch
-switch 中的判断执行的是 === 严格相等运算符，而不是==所以不会发生类型转化</description>
+{ var a= 1}console.log(a) // 1条件语句 支持 if else以及switch</description>
     </item>
     
     <item>
@@ -163,12 +232,12 @@ next Page 51</description>
     </item>
     
     <item>
-      <title>es5规范以及DOM规范——01入门介绍</title>
-      <link>http://liuchenshuo.com/2021/04/11/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8301%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</link>
+      <title>es5规范以及DOM规范——01 入门介绍</title>
+      <link>http://liuchenshuo.com/2021/04/11/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8301-%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</link>
       <pubDate>Sun, 11 Apr 2021 09:03:51 +0200</pubDate>
       
-      <guid>http://liuchenshuo.com/2021/04/11/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8301%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</guid>
-      <description>ES5 以及 DOM 规范&amp;ndash;01入门介绍  学习参考链接 https://wangdoc.com/javascript/
+      <guid>http://liuchenshuo.com/2021/04/11/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%8301-%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;01 入门介绍  学习参考链接 https://wangdoc.com/javascript/
  浏览器的控制台console是可以敲代码运行的，shift + enter 是换行。
 JavaScript语言优缺点：《JavaScript: The Good Parts》
 语言的产生 1995年5月，Brendan Eich 只用了10天，就设计完成了这种语言的第一版。它是一个大杂烩，语法有多个来源。
