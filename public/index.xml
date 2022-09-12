@@ -6,7 +6,28 @@
     <description>Recent content on Lcs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Sep 2022 09:03:51 +0200</lastBuildDate><atom:link href="http://liuchenshuo.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Sep 2022 09:03:51 +0200</lastBuildDate><atom:link href="http://liuchenshuo.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>js相关语法详解--01 call()、apply()、bind()语法</title>
+      <link>http://liuchenshuo.com/2022/09/11/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3-01-callapplybind%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Sun, 11 Sep 2022 09:03:51 +0200</pubDate>
+      
+      <guid>http://liuchenshuo.com/2022/09/11/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3-01-callapplybind%E8%AF%AD%E6%B3%95/</guid>
+      <description>js相关语法详解&amp;ndash;01 call()、apply()、bind()语法  学习参考链接：前置学习函数解释 https://www.w3school.com.cn/js/js_function_invocation.asp
+学习参考链接：call() 语法学习 https://www.w3school.com.cn/js/js_function_call.asp
+学习参考链接：Apply() 语法学习 https://www.w3school.com.cn/js/js_function_call.asp
+学习参考链接：比较好的语法解释 https://blog.csdn.net/wkl115211/article/details/80255967
+学习参考链接：比较好的示例 https://www.runoob.com/w3cnote/js-call-apply-bind.html
+ 一般来说，call()、apply()、bind() 三个方法都是一起介绍，因为用法类似，只是有细微差距。
+所有函数（这里说的函数是指对象以及对象的方法）都具有call()、apply()、bind() 三个方法。他们可以在执行方法时候用一个值指向this，并改变面向对象的作用域。
+call() 语法   call() 方法是预定义的 JavaScript 方法。
+  它可以用来调用所有者对象作为参数的方法。
+  通过 call()，您能够使用属于另一个对象的方法。
+  call() 方法可接受参数。
+  示例：
+// 定义一个 person 对象var person = {firstName:&amp;quot;Bill&amp;quot;,lastName: &amp;quot;Gates&amp;quot;,fullNameWithAge: function (age) {return this.firstName + &amp;quot; &amp;quot; + this.lastName+ &amp;quot;, age: &amp;quot; + age;}}// 执行对象内部函数person.</description>
+    </item>
+    
     <item>
       <title>es5规范以及DOM规范--06 编程风格（个人）</title>
       <link>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-06-%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC%E4%B8%AA%E4%BA%BA/</link>
@@ -34,7 +55,16 @@ var qs = location.search.substring(1);var hostName=location.</description>
       
       <guid>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/</guid>
       <description>ES5 以及 DOM 规范&amp;ndash;07 标准库  学习参考链接 https://wangdoc.com/javascript/stdlib/index.html
- Object对象 </description>
+ Object对象   重要静态方法 Object.keys
+Object.keys方法和Object.getOwnPropertyNames方法都用来遍历对象的属性。
+一般两者相同，只有涉及不可枚举属性时，才会有不一样的结果。Object.keys方法只返回可枚举的属性，Object.getOwnPropertyNames方法还返回不可枚举的属性名。
+示例：
+var a = [&#39;Hello&#39;, &#39;World&#39;];Object.keys(a) // [&amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;]Object.getOwnPropertyNames(a) // [&amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;, &amp;quot;length&amp;quot;]一般情况下，几乎总是使用Object.keys方法，遍历对象的属性。
+示例：
+var obj = {p1: 123,p2: 456};Object.keys(obj) // [&amp;quot;p1&amp;quot;, &amp;quot;p2&amp;quot;]  重要实例方法 Object.prototype.hasOwnProperty()
+Object.prototype.hasOwnProperty方法接受一个字符串作为参数，返回一个布尔值，表示该实例对象自身是否具有该属性。
+示例：
+var obj = {p: 123};// 对象obj自身具有p属性，所以返回trueobj.hasOwnProperty(&#39;p&#39;) // true// oString属性是继承的，所以返回falseobj.hasOwnProperty(&#39;toString&#39;) // false  属性描述对象 </description>
     </item>
     
     <item>

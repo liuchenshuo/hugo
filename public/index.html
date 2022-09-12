@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liuchenshuo.com/" />
-<meta property="og:updated_time" content="2022-09-10T09:03:51+02:00" />
+<meta property="og:updated_time" content="2022-09-11T09:03:51+02:00" />
 
     
     <meta itemprop="name" content="Lcs">
@@ -161,12 +161,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        20
+        21
         <span>博客</span>
       </div>
       <div class="article-info-block">
         
-          9
+          10
         
         <span>
             标签
@@ -246,6 +246,159 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://liuchenshuo.com/2022/09/11/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3-01-callapplybind%E8%AF%AD%E6%B3%95/">
+    <h1 class="article-title" itemprop="name">
+        js相关语法详解--01 call()、apply()、bind()语法
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2022-09-11 09:03:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-09-11</time>
+            &middot;
+            297
+            个字
+            &middot;
+            2
+            分钟前读过
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://liuchenshuo.com/categories/%E5%89%8D%E7%AB%AF">前端</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://liuchenshuo.com/tags/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3">js相关语法详解</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                js相关语法详解&ndash;01 call()、apply()、bind()语法  学习参考链接：前置学习函数解释 https://www.w3school.com.cn/js/js_function_invocation.asp
+学习参考链接：call() 语法学习 https://www.w3school.com.cn/js/js_function_call.asp
+学习参考链接：Apply() 语法学习 https://www.w3school.com.cn/js/js_function_call.asp
+学习参考链接：比较好的语法解释 https://blog.csdn.net/wkl115211/article/details/80255967
+学习参考链接：比较好的示例 https://www.runoob.com/w3cnote/js-call-apply-bind.html
+ 一般来说，call()、apply()、bind() 三个方法都是一起介绍，因为用法类似，只是有细微差距。
+所有函数（这里说的函数是指对象以及对象的方法）都具有call()、apply()、bind() 三个方法。他们可以在执行方法时候用一个值指向this，并改变面向对象的作用域。
+call() 语法   call() 方法是预定义的 JavaScript 方法。
+  它可以用来调用所有者对象作为参数的方法。
+  通过 call()，您能够使用属于另一个对象的方法。
+  call() 方法可接受参数。
+  示例：
+// 定义一个 person 对象var person = {firstName:&quot;Bill&quot;,lastName: &quot;Gates&quot;,fullNameWithAge: function (age) {return this.firstName + &quot; &quot; + this.lastName+ &quot;, age: &quot; + age;}}// 执行对象内部函数person.
+            </p>
+            <p class="article-more-link">
+                <a href="http://liuchenshuo.com/2022/09/11/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3-01-callapplybind%E8%AF%AD%E6%B3%95/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://liuchenshuo.com/2022/09/11/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3-01-callapplybind%E8%AF%AD%E6%B3%95/" data-id="ed697aef1c3f9276e88fc0b6f704da2f" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -417,7 +570,7 @@ var qs = location.search.substring(1);var hostName=location.
             <i class="fa fa-calendar"></i>
             <time datetime="2022-09-10 09:03:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-09-10</time>
             &middot;
-            8
+            64
             个字
             &middot;
             1
@@ -457,7 +610,16 @@ var qs = location.search.substring(1);var hostName=location.
         <div class="article-entry" itemprop="articleBody">
             <p>
                 ES5 以及 DOM 规范&ndash;07 标准库  学习参考链接 https://wangdoc.com/javascript/stdlib/index.html
- Object对象 
+ Object对象   重要静态方法 Object.keys
+Object.keys方法和Object.getOwnPropertyNames方法都用来遍历对象的属性。
+一般两者相同，只有涉及不可枚举属性时，才会有不一样的结果。Object.keys方法只返回可枚举的属性，Object.getOwnPropertyNames方法还返回不可枚举的属性名。
+示例：
+var a = ['Hello', 'World'];Object.keys(a) // [&quot;0&quot;, &quot;1&quot;]Object.getOwnPropertyNames(a) // [&quot;0&quot;, &quot;1&quot;, &quot;length&quot;]一般情况下，几乎总是使用Object.keys方法，遍历对象的属性。
+示例：
+var obj = {p1: 123,p2: 456};Object.keys(obj) // [&quot;p1&quot;, &quot;p2&quot;]  重要实例方法 Object.prototype.hasOwnProperty()
+Object.prototype.hasOwnProperty方法接受一个字符串作为参数，返回一个布尔值，表示该实例对象自身是否具有该属性。
+示例：
+var obj = {p: 123};// 对象obj自身具有p属性，所以返回trueobj.hasOwnProperty('p') // true// oString属性是继承的，所以返回falseobj.hasOwnProperty('toString') // false  属性描述对象 
             </p>
             <p class="article-more-link">
                 <a href="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/">
@@ -1576,151 +1738,6 @@ NETWORK ID NAME DRIVER SCOPE78a4240d5b93 bridge bridge localb93f96ae1e20 host 
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-03%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-    <h1 class="article-title" itemprop="name">
-        es5规范以及DOM规范--03数据类型
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2021-07-09 09:03:51 &#43;0200 &#43;0200" itemprop="datePublished">2021-07-09</time>
-            &middot;
-            28
-            个字
-            &middot;
-            1
-            分钟前读过
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://liuchenshuo.com/categories/%E5%89%8D%E7%AB%AF">前端</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://liuchenshuo.com/tags/es5%E8%A7%84%E8%8C%83">es5规范</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                ES5 以及 DOM 规范&ndash;03数据类型  学习参考链接 https://wangdoc.com/javascript/types/general.html
- 概述 六种基本类型
- 数值（number）：整数以及小数，例如：1; 3.14。 字符串（string）：文本，例如 hello。 布尔值（boolean）：表示真伪，两个取值true; false。 undefined：表示未定义或不存在。 null：表示空值。 对象（object）：各种值的集合。  对象可以细分为三个子类
- 狭义对象（object） 数组（array） 函数（function）  由于函数可以作为一种类型，为支持函数式编程提供了基础。
-typeof 运算符 返回对象类型，特殊的 null 类型是 object，这个是由于历史原因，null是后来作为一种特殊数据类型。
-            </p>
-            <p class="article-more-link">
-                <a href="http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-03%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://liuchenshuo.com/2021/07/09/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-03%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="17174fb1b86d14a2e7180f60a4f8be67" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1746,6 +1763,32 @@ typeof 运算符 返回对象类型，特殊的 null 类型是 object，这个�
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://liuchenshuo.com/2022/09/11/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3-01-callapplybind%E8%AF%AD%E6%B3%95/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://liuchenshuo.com/categories/%E5%89%8D%E7%AB%AF">
+                        前端
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://liuchenshuo.com/2022/09/11/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3-01-callapplybind%E8%AF%AD%E6%B3%95/" class="title">js相关语法详解--01 call()、apply()、bind()语法</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-09-11 09:03:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-09-11</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1851,32 +1894,6 @@ typeof 运算符 返回对象类型，特殊的 null 类型是 object，这个�
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://liuchenshuo.com/2022/01/02/%E5%BC%80%E6%BA%90%E8%81%8A%E5%A4%A9%E5%AE%A4-rocketchat-%E5%AE%89%E8%A3%85/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://liuchenshuo.com/categories/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6">
-                        开源软件
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://liuchenshuo.com/2022/01/02/%E5%BC%80%E6%BA%90%E8%81%8A%E5%A4%A9%E5%AE%A4-rocketchat-%E5%AE%89%E8%A3%85/" class="title">开源聊天室 RocketChat 安装</a></p>
-                    <p class="item-date">
-                        <time datetime="2022-01-02 12:10:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-01-02</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1919,7 +1936,7 @@ typeof 运算符 返回对象类型，特殊的 null 类型是 object，这个�
                 <a class="category-list-link" href="http://liuchenshuo.com/categories/%E5%89%8D%E7%AB%AF">
                     前端
                 </a>
-                <span class="category-list-count">10</span>
+                <span class="category-list-count">11</span>
             </li>
             
             <li class="category-list-item">
@@ -1975,6 +1992,14 @@ typeof 运算符 返回对象类型，特殊的 null 类型是 object，这个�
                 
                 <a class="category-list-link" href="http://liuchenshuo.com/tags/es6%E8%A7%84%E8%8C%83">
                     es6规范
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://liuchenshuo.com/tags/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3">
+                    js相关语法详解
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -2056,6 +2081,9 @@ typeof 运算符 返回对象类型，特殊的 null 类型是 object，这个�
         
         
         <a href="http://liuchenshuo.com/tags/es6%E8%A7%84%E8%8C%83" style="font-size: 12px;">es6规范</a>
+        
+        
+        <a href="http://liuchenshuo.com/tags/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3" style="font-size: 12px;">js相关语法详解</a>
         
         
         <a href="http://liuchenshuo.com/tags/vue" style="font-size: 12px;">vue</a>
