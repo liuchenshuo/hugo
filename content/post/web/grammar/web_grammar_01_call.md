@@ -7,7 +7,7 @@ date = "2022-09-11T09:03:51+02:00"
 description = ""
 images = []
 tags = ["js相关语法详解"]
-title = "js相关语法详解--01 call语法"
+title = "js相关语法详解--01 call()、apply()、bind()语法"
 
 +++
 # js相关语法详解--01 call()、apply()、bind()语法
