@@ -6,7 +6,33 @@
     <description>Recent content in Posts on Lcs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Sep 2022 09:03:51 +0200</lastBuildDate><atom:link href="http://liuchenshuo.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Oct 2022 09:52:51 +0200</lastBuildDate><atom:link href="http://liuchenshuo.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>es5规范以及DOM规范--07-2 标准库</title>
+      <link>http://liuchenshuo.com/2022/10/01/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-2-%E6%A0%87%E5%87%86%E5%BA%93/</link>
+      <pubDate>Sat, 01 Oct 2022 09:52:51 +0200</pubDate>
+      
+      <guid>http://liuchenshuo.com/2022/10/01/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-2-%E6%A0%87%E5%87%86%E5%BA%93/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;07-2 标准库  学习参考链接 https://wangdoc.com/javascript/stdlib/index.html
+ 标准库主要对象
+  Object 对象
+  属性描述对象
+  Array 对象
+  包装对象
+  Boolean 对象
+  Number 对象
+  String 对象
+  Math 对象
+  Date 对象
+  RegExp 对象
+  JSON 对象
+  包装对象 对象是 JavaScript 语言最主要的数据类型，三种原始类型的值——数值、字符串、布尔值——在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”（wrapper）。
+所谓“包装对象”，指的是与数值、字符串、布尔值分别相对应的Number、String、Boolean三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象。
+包装对象的设计目的，首先是使得“对象”这种类型可以覆盖 JavaScript 所有的值，整门语言有一个通用的数据模型，其次是使得原始类型的值也有办法调用自己的方法。
+某些场合，原始类型的值会自动当作包装对象调用，即调用包装对象的属性和方法。这时，JavaScript 引擎会自动将原始类型的值转为包装对象实例，并在使用后立刻销毁实例。
+// valueOf() 方法new String(&#39;abc&#39;).valueOf() // &amp;quot;abc&amp;quot;// toString() 方法new String(&#39;abc&#39;).</description>
+    </item>
+    
     <item>
       <title>js相关语法详解--01 call()、apply()、bind()语法</title>
       <link>http://liuchenshuo.com/2022/09/11/js%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3-01-callapplybind%E8%AF%AD%E6%B3%95/</link>
@@ -49,22 +75,29 @@ var qs = location.search.substring(1);var hostName=location.</description>
     </item>
     
     <item>
-      <title>es5规范以及DOM规范--07 标准库</title>
-      <link>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/</link>
+      <title>es5规范以及DOM规范--07-1 标准库</title>
+      <link>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-1-%E6%A0%87%E5%87%86%E5%BA%93/</link>
       <pubDate>Sat, 10 Sep 2022 09:03:51 +0200</pubDate>
       
-      <guid>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/</guid>
-      <description>ES5 以及 DOM 规范&amp;ndash;07 标准库  学习参考链接 https://wangdoc.com/javascript/stdlib/index.html
- Object对象   重要静态方法 Object.keys
+      <guid>http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-1-%E6%A0%87%E5%87%86%E5%BA%93/</guid>
+      <description>ES5 以及 DOM 规范&amp;ndash;07-1 标准库  学习参考链接 https://wangdoc.com/javascript/stdlib/index.html
+ 标准库主要对象
+  Object 对象
+  属性描述对象
+  Array 对象
+  包装对象
+  Boolean 对象
+  Number 对象
+  String 对象
+  Math 对象
+  Date 对象
+  RegExp 对象
+  JSON 对象
+  Object对象   重要静态方法 Object.keys
 Object.keys方法和Object.getOwnPropertyNames方法都用来遍历对象的属性。
-一般两者相同，只有涉及不可枚举属性时，才会有不一样的结果。Object.keys方法只返回可枚举的属性，Object.getOwnPropertyNames方法还返回不可枚举的属性名。
+一般两者相同，只有涉及不可枚举属性时，才会有不一样的结果。Object.keys方法只返回可枚举的属性，Object.getOwnPropertyNames方法返回不可枚举的属性名。
 示例：
-var a = [&#39;Hello&#39;, &#39;World&#39;];Object.keys(a) // [&amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;]Object.getOwnPropertyNames(a) // [&amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;, &amp;quot;length&amp;quot;]一般情况下，几乎总是使用Object.keys方法，遍历对象的属性。
-示例：
-var obj = {p1: 123,p2: 456};Object.keys(obj) // [&amp;quot;p1&amp;quot;, &amp;quot;p2&amp;quot;]  重要实例方法 Object.prototype.hasOwnProperty()
-Object.prototype.hasOwnProperty方法接受一个字符串作为参数，返回一个布尔值，表示该实例对象自身是否具有该属性。
-示例：
-var obj = {p: 123};// 对象obj自身具有p属性，所以返回trueobj.hasOwnProperty(&#39;p&#39;) // true// oString属性是继承的，所以返回falseobj.hasOwnProperty(&#39;toString&#39;) // false  属性描述对象 </description>
+var a = [&#39;Hello&#39;, &#39;World&#39;];Object.keys(a) // [&amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;]Object.</description>
     </item>
     
     <item>

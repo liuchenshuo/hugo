@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liuchenshuo.com/" />
-<meta property="og:updated_time" content="2022-09-11T09:03:51+02:00" />
+<meta property="og:updated_time" content="2022-10-01T09:52:51+02:00" />
 
     
     <meta itemprop="name" content="Lcs">
@@ -161,7 +161,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        21
+        22
         <span>博客</span>
       </div>
       <div class="article-info-block">
@@ -246,6 +246,164 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://liuchenshuo.com/2022/10/01/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-2-%E6%A0%87%E5%87%86%E5%BA%93/">
+    <h1 class="article-title" itemprop="name">
+        es5规范以及DOM规范--07-2 标准库
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2022-10-01 09:52:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-10-01</time>
+            &middot;
+            82
+            个字
+            &middot;
+            1
+            分钟前读过
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://liuchenshuo.com/categories/%E5%89%8D%E7%AB%AF">前端</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://liuchenshuo.com/tags/es5%E8%A7%84%E8%8C%83">es5规范</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                ES5 以及 DOM 规范&ndash;07-2 标准库  学习参考链接 https://wangdoc.com/javascript/stdlib/index.html
+ 标准库主要对象
+  Object 对象
+  属性描述对象
+  Array 对象
+  包装对象
+  Boolean 对象
+  Number 对象
+  String 对象
+  Math 对象
+  Date 对象
+  RegExp 对象
+  JSON 对象
+  包装对象 对象是 JavaScript 语言最主要的数据类型，三种原始类型的值——数值、字符串、布尔值——在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”（wrapper）。
+所谓“包装对象”，指的是与数值、字符串、布尔值分别相对应的Number、String、Boolean三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象。
+包装对象的设计目的，首先是使得“对象”这种类型可以覆盖 JavaScript 所有的值，整门语言有一个通用的数据模型，其次是使得原始类型的值也有办法调用自己的方法。
+某些场合，原始类型的值会自动当作包装对象调用，即调用包装对象的属性和方法。这时，JavaScript 引擎会自动将原始类型的值转为包装对象实例，并在使用后立刻销毁实例。
+// valueOf() 方法new String('abc').valueOf() // &quot;abc&quot;// toString() 方法new String('abc').
+            </p>
+            <p class="article-more-link">
+                <a href="http://liuchenshuo.com/2022/10/01/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-2-%E6%A0%87%E5%87%86%E5%BA%93/">
+                    阅读更多
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://liuchenshuo.com/2022/10/01/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-2-%E6%A0%87%E5%87%86%E5%BA%93/" data-id="0dc7aa53e47affef4e833d29c02cf724" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -558,9 +716,9 @@ var qs = location.search.substring(1);var hostName=location.
         </a>
 
         <header class="article-header">
-    <a href="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/">
+    <a href="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-1-%E6%A0%87%E5%87%86%E5%BA%93/">
     <h1 class="article-title" itemprop="name">
-        es5规范以及DOM规范--07 标准库
+        es5规范以及DOM规范--07-1 标准库
     </h1>
     </a>
     <div class="article-meta">
@@ -570,10 +728,10 @@ var qs = location.search.substring(1);var hostName=location.
             <i class="fa fa-calendar"></i>
             <time datetime="2022-09-10 09:03:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-09-10</time>
             &middot;
-            64
+            573
             个字
             &middot;
-            1
+            3
             分钟前读过
         </div>
         
@@ -609,26 +767,33 @@ var qs = location.search.substring(1);var hostName=location.
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                ES5 以及 DOM 规范&ndash;07 标准库  学习参考链接 https://wangdoc.com/javascript/stdlib/index.html
- Object对象   重要静态方法 Object.keys
+                ES5 以及 DOM 规范&ndash;07-1 标准库  学习参考链接 https://wangdoc.com/javascript/stdlib/index.html
+ 标准库主要对象
+  Object 对象
+  属性描述对象
+  Array 对象
+  包装对象
+  Boolean 对象
+  Number 对象
+  String 对象
+  Math 对象
+  Date 对象
+  RegExp 对象
+  JSON 对象
+  Object对象   重要静态方法 Object.keys
 Object.keys方法和Object.getOwnPropertyNames方法都用来遍历对象的属性。
-一般两者相同，只有涉及不可枚举属性时，才会有不一样的结果。Object.keys方法只返回可枚举的属性，Object.getOwnPropertyNames方法还返回不可枚举的属性名。
+一般两者相同，只有涉及不可枚举属性时，才会有不一样的结果。Object.keys方法只返回可枚举的属性，Object.getOwnPropertyNames方法返回不可枚举的属性名。
 示例：
-var a = ['Hello', 'World'];Object.keys(a) // [&quot;0&quot;, &quot;1&quot;]Object.getOwnPropertyNames(a) // [&quot;0&quot;, &quot;1&quot;, &quot;length&quot;]一般情况下，几乎总是使用Object.keys方法，遍历对象的属性。
-示例：
-var obj = {p1: 123,p2: 456};Object.keys(obj) // [&quot;p1&quot;, &quot;p2&quot;]  重要实例方法 Object.prototype.hasOwnProperty()
-Object.prototype.hasOwnProperty方法接受一个字符串作为参数，返回一个布尔值，表示该实例对象自身是否具有该属性。
-示例：
-var obj = {p: 123};// 对象obj自身具有p属性，所以返回trueobj.hasOwnProperty('p') // true// oString属性是继承的，所以返回falseobj.hasOwnProperty('toString') // false  属性描述对象 
+var a = ['Hello', 'World'];Object.keys(a) // [&quot;0&quot;, &quot;1&quot;]Object.
             </p>
             <p class="article-more-link">
-                <a href="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/">
+                <a href="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-1-%E6%A0%87%E5%87%86%E5%BA%93/">
                     阅读更多
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/" data-id="c1204b586f3564cafd351fd3fb7d794c" class="article-share-link">
+    <a data-url="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-1-%E6%A0%87%E5%87%86%E5%BA%93/" data-id="e062efe9e5667835aac9d4327b9b8407" class="article-share-link">
         <i class="fa fa-share"></i>
         分享
     </a>
@@ -1596,148 +1761,6 @@ NETWORK ID NAME DRIVER SCOPE78a4240d5b93 bridge bridge localb93f96ae1e20 host 
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="http://liuchenshuo.com/2022/01/01/%E5%BC%80%E6%BA%90%E8%AE%BA%E5%9D%9B-nodebb-%E9%85%8D%E7%BD%AE/">
-    <h1 class="article-title" itemprop="name">
-        开源论坛 NodeBB 配置
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2022-01-01 12:10:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-01-01</time>
-            &middot;
-            14
-            个字
-            &middot;
-            1
-            分钟前读过
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="http://liuchenshuo.com/categories/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6">开源软件</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="http://liuchenshuo.com/tags/%E5%BC%80%E6%BA%90%E8%AE%BA%E5%9D%9B">开源论坛</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                NodeBB论坛，初始化后一些简单配置说明 管理员登录后，点击首页图标最后一个即可进入管理员界面
- 设置语言为中文 SETTING -&gt; Languages 选择 简体中文，点击页面右下角的保存按钮进行保存，然后刷新界面 可以看到已经变成中文格式 修改网站主体：名称、图标等 设置 -&gt; 基本  补充中&hellip;
-            </p>
-            <p class="article-more-link">
-                <a href="http://liuchenshuo.com/2022/01/01/%E5%BC%80%E6%BA%90%E8%AE%BA%E5%9D%9B-nodebb-%E9%85%8D%E7%BD%AE/">
-                    阅读更多
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="http://liuchenshuo.com/2022/01/01/%E5%BC%80%E6%BA%90%E8%AE%BA%E5%9D%9B-nodebb-%E9%85%8D%E7%BD%AE/" data-id="e19eed0eee367fd8de42c9adc5dff860" class="article-share-link">
-        <i class="fa fa-share"></i>
-        分享
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1763,6 +1786,32 @@ NETWORK ID NAME DRIVER SCOPE78a4240d5b93 bridge bridge localb93f96ae1e20 host 
     </h3>
     <div class="widget">
       <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://liuchenshuo.com/2022/10/01/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-2-%E6%A0%87%E5%87%86%E5%BA%93/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="http://liuchenshuo.com/categories/%E5%89%8D%E7%AB%AF">
+                        前端
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://liuchenshuo.com/2022/10/01/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-2-%E6%A0%87%E5%87%86%E5%BA%93/" class="title">es5规范以及DOM规范--07-2 标准库</a></p>
+                    <p class="item-date">
+                        <time datetime="2022-10-01 09:52:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-10-01</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1792,7 +1841,7 @@ NETWORK ID NAME DRIVER SCOPE78a4240d5b93 bridge bridge localb93f96ae1e20 host 
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/" class="thumbnail">
+                    <a href="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-1-%E6%A0%87%E5%87%86%E5%BA%93/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -1809,7 +1858,7 @@ NETWORK ID NAME DRIVER SCOPE78a4240d5b93 bridge bridge localb93f96ae1e20 host 
                     </p>
                     
                     
-                    <p class="item-title"><a href="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-%E6%A0%87%E5%87%86%E5%BA%93/" class="title">es5规范以及DOM规范--07 标准库</a></p>
+                    <p class="item-title"><a href="http://liuchenshuo.com/2022/09/10/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-07-1-%E6%A0%87%E5%87%86%E5%BA%93/" class="title">es5规范以及DOM规范--07-1 标准库</a></p>
                     <p class="item-date">
                         <time datetime="2022-09-10 09:03:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-09-10</time>
                     </p>
@@ -1868,32 +1917,6 @@ NETWORK ID NAME DRIVER SCOPE78a4240d5b93 bridge bridge localb93f96ae1e20 host 
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://liuchenshuo.com/2022/08/20/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-05-%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="http://liuchenshuo.com/categories/%E5%89%8D%E7%AB%AF">
-                        前端
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="http://liuchenshuo.com/2022/08/20/es5%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8Adom%E8%A7%84%E8%8C%83-05-%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/" class="title">es5规范以及DOM规范--05 语法介绍</a></p>
-                    <p class="item-date">
-                        <time datetime="2022-08-20 09:03:51 &#43;0200 &#43;0200" itemprop="datePublished">2022-08-20</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1936,7 +1959,7 @@ NETWORK ID NAME DRIVER SCOPE78a4240d5b93 bridge bridge localb93f96ae1e20 host 
                 <a class="category-list-link" href="http://liuchenshuo.com/categories/%E5%89%8D%E7%AB%AF">
                     前端
                 </a>
-                <span class="category-list-count">11</span>
+                <span class="category-list-count">12</span>
             </li>
             
             <li class="category-list-item">
@@ -1985,7 +2008,7 @@ NETWORK ID NAME DRIVER SCOPE78a4240d5b93 bridge bridge localb93f96ae1e20 host 
                 <a class="category-list-link" href="http://liuchenshuo.com/tags/es5%E8%A7%84%E8%8C%83">
                     es5规范
                 </a>
-                <span class="category-list-count">8</span>
+                <span class="category-list-count">9</span>
             </li>
             
             <li class="category-list-item">
