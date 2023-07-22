@@ -30,3 +30,4 @@ React Native使你能够在Javascript和 React的基础上获得完全一致的�
 
 ## 2022-12-3 react-native
 
+这个1.0版本很难跨越，当前在0.71，正常演进，不过版本演进确实很慢。
